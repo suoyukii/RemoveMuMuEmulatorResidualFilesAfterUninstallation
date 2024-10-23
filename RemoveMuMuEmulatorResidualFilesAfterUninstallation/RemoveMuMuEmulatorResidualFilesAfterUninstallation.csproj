@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <LangVersion>latestmajor</LangVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <ApplicationManifest>app.manifest</ApplicationManifest>
+        <Authors>suoyukii</Authors>
+        <Copyright>Copyright © 2024 suoyukii</Copyright>
+        <PackageProjectUrl>https://github.com/suoyukii/RemoveMuMuEmulatorResidualFilesAfterUninstallation</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/suoyukii/RemoveMuMuEmulatorResidualFilesAfterUninstallation?tab=MIT-1-ov-file</PackageLicenseUrl>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <DebugType>none</DebugType>
+    </PropertyGroup>
+</Project>
