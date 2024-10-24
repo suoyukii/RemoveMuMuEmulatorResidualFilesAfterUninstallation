@@ -14,10 +14,13 @@ if (Directory.Exists(appdata_path))
     }
 }
 
-// AppData\Local
+// AppData\Local\MuMuPlayer
 var local_appdata_path = Environment.GetEnvironmentVariable("localappdata");
 mumu_player_path = local_appdata_path + @"\MuMuPlayer";
 if (Directory.Exists(mumu_player_path)) Directory.Delete(mumu_player_path, true);
+// AppData\Local\NemuPlayer
+var nemu_player_path = local_appdata_path + @"\NemuPlayer";
+if (Directory.Exists(nemu_player_path)) Directory.Delete(nemu_player_path, true);
 // AppData\Local\CrashRpt\UnsentCrashReports
 var unsent_crash_reports = local_appdata_path + @"\CrashRpt\UnsentCrashReports";
 foreach (var di in new DirectoryInfo(unsent_crash_reports).GetDirectories("MuMu*"))
