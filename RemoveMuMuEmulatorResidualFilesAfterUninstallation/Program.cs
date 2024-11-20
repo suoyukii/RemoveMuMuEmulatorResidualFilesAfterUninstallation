@@ -1,4 +1,10 @@
 ﻿using Microsoft.Win32;
+using RemoveMuMuEmulatorResidualFilesAfterUninstallation;
+
+// Load language
+var langs = Language.Get();
+Console.Title = langs[0];
+Console.WriteLine(langs[1]);
 
 // AppData\Roaming
 var appdata_path = Environment.GetEnvironmentVariable("appdata") + @"\Netease";
@@ -78,6 +84,8 @@ if (Directory.Exists(programfiles_x86))
         var has_nemu_drv_reg = reg_key.GetSubKeyNames().Contains("NeumDrv");
         if (has_nemu_drv_reg) reg_key.DeleteSubKey("NeumDrv");
         reg_key.Close();
-        Console.WriteLine("Restart your computer and run this program again");
+        Console.WriteLine(langs[2]);
     }
 }
+Console.WriteLine(langs[3]);
+Console.ReadLine();
